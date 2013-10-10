@@ -54,7 +54,7 @@ public class LifeGame extends JFrame{
 		}
 	}
 
-	private void animatein() {
+	protected void animatein() {
 		for(int y = 0; y < lifecolors[0].length; y++){
 			for(int x = 0; x < lifecolors.length; x++){
 				lifecolors[x][y] = Color.black;
@@ -65,7 +65,7 @@ public class LifeGame extends JFrame{
 
 	}
 
-	private void addAll(){
+	protected void addAll(){
 		for(int x = 0; x < lifecolors.length; x++){
 			for(int y = 0; y < lifecolors[x].length; y++){
 				lifecolors[x][y] = Color.WHITE;
@@ -73,7 +73,7 @@ public class LifeGame extends JFrame{
 		}
 	}
 
-	private void renderFromLife(){
+	protected void renderFromLife(){
 		for(int x = 0; x < lifecolors.length; x++){
 			for(int y = 0; y < lifecolors[x].length; y++){
 				if(life[x][y]){
@@ -87,7 +87,7 @@ public class LifeGame extends JFrame{
 		render();
 	}
 
-	private void render(){
+	protected void render(){
 		drawPanel.render(lifecolors);
 	}
 
@@ -168,7 +168,7 @@ public class LifeGame extends JFrame{
 		return count;
 	}
 
-	private void sleep(long time){
+	protected void sleep(long time){
 		try{ Thread.sleep(time); } catch(Exception e){ }
 	}
 }

@@ -146,9 +146,9 @@ public class LifeGame extends JFrame{
 
 	public int getNearLives(boolean[][] snap, int rx, int ry){
 		int count = 0;
-		if(rx > 0 && ry > 0 && rx < snap.length-1 && ry < snap[0].length-1){
 			for(int x1 = rx - 1; x1 <= rx+1; x1++){
 				for(int y1 = ry - 1; y1 <= ry+1; y1++){
+					if(x1 > 0 && y1 > 0 && x1 < snap.length-1 && y1 < snap[0].length-1){
 //					lifecolors[rx][ry] = Color.blue;
 //					render();
 					if(!(x1 == rx && y1 == ry)){
